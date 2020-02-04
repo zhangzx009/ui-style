@@ -5,3 +5,8 @@ node_modules/
 .project
 .settings
 .init_lock
+
+
+# Ignoring built up css and map files
+scss/*.css
+scss/*.css.map
