@@ -242,5 +242,6 @@ module.exports = {
 *     1. use https://alistapart.com/article/the-era-of-symbol-fonts/
 *     [This example uses a typographic feature called ligatures, which allows rendering of an icon glyph simply by using its textual name.
 *      The replacement is done automatically by the web browser and provides more readable code than the equivalent numeric character reference.]
+*    2. create svg sprite
 *
 * */

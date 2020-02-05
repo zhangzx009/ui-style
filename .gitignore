@@ -10,3 +10,6 @@ node_modules/
 # Ignoring built up css and map files
 scss/*.css
 scss/*.css.map
+
+
+package-lock.json

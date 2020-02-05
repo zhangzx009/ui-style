@@ -1,25 +1,5 @@
-# Vant Icons
+# cmft icons 
 
-## Install
-
-#### NPM
-
-```shell
-npm i @vant/icons -S
-```
-
-#### YARN
-
-```shell
-yarn add @vant/icons
-```
-
-## Document
-
-- [Usage in Vue](https://youzan.github.io/vant/#/zh-CN/icon)
-- [Usage in Weapp](https://youzan.github.io/vant-weapp/#/icon)
-
-## Contribution
 
 ### Update Icons
 

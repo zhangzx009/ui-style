@@ -1,0 +1,14 @@
+@import '~csstyle/csstyle';
+
+$csstyle-component-symbol: 'cm-';
+
+@include component(button) {
+  @include option(primary) {
+    background: pink;
+  }
+}
+
+
+.cm-button {
+  color: red;
+}

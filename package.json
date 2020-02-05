@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "commitmsg": "commitlint -e $GIT_PARAMS"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
@@ -16,6 +17,12 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "dependencies": {
+    "@semantic-release/exec": "^5.0.0",
+    "@storybook/addon-backgrounds": "^5.3.10",
+    "@storybook/addon-knobs": "^5.3.10",
+    "@storybook/html": "^5.3.10",
+    "classnames": "^2.2.6"
   }
-
 }
