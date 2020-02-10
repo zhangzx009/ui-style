@@ -1,6 +1,6 @@
 const path = require("path");
 
-let pagConfg = {
+let pageConfig = {
     index: {
         // page 的入口
         entry: "./template/index.js"
@@ -8,10 +8,19 @@ let pagConfg = {
 }
 let devServerConfig = {
     port: process.env.VUE_APP_PORT,
+    // proxy: {
+    //     '/style/': {
+    //         target: 'http://localhost:8989',
+    //         changeOrigin: true,
+    //         pathRewrite: {
+    //             '^/style': ''
+    //         }
+    //     }
+    // },
 }
 module.exports = {
     assetsDir: 'assets',
-    pages: pagConfg,
+    pages: pageConfig,
     devServer: devServerConfig,
     configureWebpack: {
         resolve: {
