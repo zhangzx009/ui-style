@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "demo": "lerna bootstrap && lerna exec --scope @cm-ui/cm-css npm run serve"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",

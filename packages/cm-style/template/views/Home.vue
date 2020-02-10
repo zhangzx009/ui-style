@@ -1,5 +1,5 @@
 <template>
-    <div class="cm-button --primary">
+    <div>
         this is the  财务应用
     </div>
 </template>
@@ -12,6 +12,5 @@
     }
 </script>
 <style lang="scss">
-    @import "../../sass/components/button";
 
 </style>
