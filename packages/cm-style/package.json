@@ -30,6 +30,7 @@
     "@vue/cli-plugin-babel": "^4.1.0",
     "@vue/cli-plugin-router": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
+    "compass-mixins": "^0.12.10",
     "css-vars": "^2.2.0",
     "csstyle": "^2.0.2",
     "fibers": "^4.0.2",

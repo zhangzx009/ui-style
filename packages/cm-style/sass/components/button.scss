@@ -1,14 +1,32 @@
-@import '~csstyle/csstyle';
+// utilities the sass modules
+@use '~csstyle/csstyle' as bem with (
+  $csstyle-component-symbol: 'cm-',
+);
 
-$csstyle-component-symbol: 'cm-';
 
-@include component(button) {
-  @include option(primary) {
+@include bem.component(button) {
+  @include bem.option(primary) {
     background: pink;
+
   }
 }
 
 
-.cm-button {
-  color: red;
+@font-face {
+  font-weight: normal;
+  font-family: 'SourceHanSans Regular';
+  font-stretch: normal;
+  font-display: auto;
+  src: url("../../assets/fonts/Source Han Sans CN Regular.ttf") format('truetype'),
+  url("../../assets/fonts/Source Han Sans CN Regular.woff2") format('woff2'),
+  url("../../assets/fonts/Source Han Sans CN Regular.woff") format('woff');
 }
+
+html{
+  font-family: "SourceHanSans Regular";
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+

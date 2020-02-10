@@ -1,6 +1,6 @@
 <template>
     <div class="cm-button --primary">
-        this is the home
+        this is the  财务应用
     </div>
 </template>
 
