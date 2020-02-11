@@ -8,15 +8,15 @@ let pageConfig = {
 }
 let devServerConfig = {
     port: process.env.VUE_APP_PORT,
-    proxy: {
-        '/style/': {
-            target: 'http://localhost:8989',
-            changeOrigin: true,
-            pathRewrite: {
-                '^/style': ''
-            }
-        }
-    },
+    // proxy: {
+    //     '/style/': {
+    //         target: 'http://localhost:8989/about',
+    //         changeOrigin: true,
+    //         pathRewrite: {
+    //             '^/style': ''
+    //         }
+    //     }
+    //},
 }
 module.exports = {
     assetsDir: 'assets',

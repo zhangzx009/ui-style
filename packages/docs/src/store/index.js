@@ -5,8 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    deviceNavigation:[]
+
   },
   mutations: {
+
   },
   actions: {
   },

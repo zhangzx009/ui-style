@@ -1,26 +1,27 @@
 <template>
-    <div class="home">
-        <main class="main">
-            <div class="main-navi">1</div>
-            <div class="sidebar">2</div>
-            <div class="doc-content">3</div>
-            <div class="device-view">
-                <div class="screen">
-                    <HelloWorld msg="Welcome to Your Vue.js App"/>
-                </div>
+
+    <main class="main">
+        <div class="main-navi">1</div>
+        <div class="sidebar">2</div>
+        <div class="doc-content">3</div>
+        <div class="device-view">
+            <div class="screen"></div>
+            <div class="screen-inside">
+                <device-frame msg="Welcome to Your Vue.js App"/>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+
 </template>
 
 <script>
     // @ is an alias to /src
-    import HelloWorld from '@/components/HelloWorld.vue'
+    import DeviceFrame from '@/components/DeviceFrame.vue'
 
     export default {
         name: 'Home',
         components: {
-            HelloWorld
+            DeviceFrame
         }
     }
 </script>
@@ -34,7 +35,7 @@
         display: grid;
         margin: 0 2em;
         grid-template-columns: 2fr 6fr 4fr;
-        grid-template-rows: 3rem auto;
+        grid-template-rows: 5rem auto;
         grid-template-areas: "topnavi topnavi device" "sidebar content device" "sidebar content device"
     }
 
@@ -58,21 +59,30 @@
         grid-area: device;
         background: azure;
         position: relative;
-        width: 330px;
-        height: 645px;
+        width: 435px;
+        height: 1100px;
         top: 50%;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         margin: 0 56px 0 26px;
-        background: url("../assets/iphoneX.38c8778.png") no-repeat center 0;
-        background-size: 100%;
-    }
-    .screen{
 
-      position: absolute;
-      width: 285px;
-      height: 540px;
-      left: 20px;
-      top:63px;
     }
+
+    .screen {
+        position: absolute;
+        pointer-events: none;
+        height: 745px;
+        width: 372px;
+        background: url("../assets/iphoneX.png") no-repeat center 0;
+        z-index: 10;
+        top: 50px;
+        left:30px;
+     }
+    .screen-inside{
+        width: 312px;
+        height: 698px;
+        margin-left: 60px;
+        margin-top: 50px;
+      }
+
 </style>

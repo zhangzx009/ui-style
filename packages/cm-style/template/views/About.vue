@@ -1,5 +1,9 @@
 <template>
-<div>this is About</div>
+    <div class="card">
+        <div class="card-content">this is the content</div>
+        this is About
+    </div>
+
 </template>
 
 <script>
@@ -8,8 +12,5 @@
     }
 </script>
 
-<style scoped>
-.about {
-    color: blue;
-}
-</style>
+<style lang="sass">
+ </style>
