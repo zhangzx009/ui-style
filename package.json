@@ -5,7 +5,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "demo": "lerna bootstrap && lerna exec --scope @cm-ui/cm-css npm run serve"
+    "preinstall": "npm install && lerna bootstrap",
+    "demo": "lerna bootstrap && lerna run demo"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
