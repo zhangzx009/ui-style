@@ -2,7 +2,9 @@
 
     <main class="main">
         <div class="main-navi">1</div>
-        <div class="sidebar">2</div>
+        <div class="sidebar">
+            <side-bar-navi></side-bar-navi>
+        </div>
         <div class="doc-content">3</div>
         <div class="device-view">
             <div class="screen"></div>
@@ -16,12 +18,23 @@
 
 <script>
     // @ is an alias to /src
-    import DeviceFrame from '@/components/DeviceFrame.vue'
+    import DeviceFrame from '@/components/DeviceFrame.vue';
+    import SideBarNavi from "@/components/SideBarNavi";
 
     export default {
         name: 'Home',
         components: {
-            DeviceFrame
+            DeviceFrame,
+            SideBarNavi
+        },
+        methods: {
+            getRouter() {
+                let mobileUrl = 'http://localhost:8989/apidoc'
+                fetch("")
+            }
+        },
+        mounted() {
+
         }
     }
 </script>
@@ -76,13 +89,14 @@
         background: url("../assets/iphoneX.png") no-repeat center 0;
         z-index: 10;
         top: 50px;
-        left:30px;
-     }
-    .screen-inside{
+        left: 30px;
+    }
+
+    .screen-inside {
         width: 312px;
         height: 698px;
         margin-left: 60px;
         margin-top: 50px;
-      }
+    }
 
 </style>

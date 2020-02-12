@@ -15,7 +15,7 @@ function template(fontName, ttf) {
 module.exports = function encode(fontName, srcDir) {
   const ttfBase64 = fs.readFileSync(`../src/${fontName}.ttf`, 'base64');
   fs.writeFileSync(
-    path.join(srcDir, 'encode.less'),
+    path.join(srcDir, 'encode.css'),
     template(config.name, `data:font/ttf;base64,${ttfBase64}`)
   );
 };

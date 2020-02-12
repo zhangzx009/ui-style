@@ -4,15 +4,15 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    deviceNavigation:[]
-
-  },
-  mutations: {
-
-  },
-  actions: {
-  },
-  modules: {
-  }
+    state: {
+        deviceNavigation: ['button', 'column', 'navigation', 'card','scroller'],
+        currentActive: 'button'
+    },
+    mutations: {
+        set_navi(state, naviName) {
+            state.currentActive = naviName
+        }
+    },
+    actions: {},
+    modules: {}
 })

@@ -3,7 +3,10 @@ const path = require("path");
 let pageConfig = {
     index: {
         // page 的入口
-        entry: "./template/index.js"
+        entry: "./template/index.js",
+        title: 'Api Doc Page',
+        filename: 'index.html',
+        template: './assets/index.html'
     }
 }
 let devServerConfig = {
@@ -25,8 +28,10 @@ module.exports = {
     configureWebpack: {
         resolve: {
             alias: {
-                "@sass": path.resolve(__dirname, 'cm-style/sass'),
-                "@template": path.resolve(__dirname, 'cm-style/template'),
+                "@scss": path.resolve(__dirname, 'scss'),
+                "@template": path.resolve(__dirname, 'template'),
+                "@components": path.resolve(__dirname, 'template/views/Documentation/Components'),
+                "@elements": path.resolve(__dirname, 'template/views/Documentation/Elements'),
             }
         }
     },

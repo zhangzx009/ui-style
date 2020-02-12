@@ -9,7 +9,7 @@
     url('./<%= cssClass %>.ttf') format('truetype');
 }
 
-.cm-icon {
+.<%= fontName %> {
   position: relative;
   display: inline-block;
   font: normal normal normal 14px/1 "<%= fontName %>";

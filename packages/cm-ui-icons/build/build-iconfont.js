@@ -12,21 +12,29 @@ const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
 const config = require('../src/config');
 
+const fileName = 'icons-cmft.sketch'
 const srcDir = path.join(__dirname, '../src');
 const svgDir = path.join(__dirname, '../assets/svg');
-const sketch = path.join(__dirname, '../assets/icons.sketch');
+const sketch = path.join(__dirname, `../assets/${fileName}`);
+
+
 const template = path.join(__dirname, './template.tpl');
+
 const formats = ['ttf', 'woff', 'woff2'];
 
 // get md5 from sketch
 const md5 = md5File.sync(sketch).slice(0, 6);
-const fontName = `${config.name}-${md5}`;
+
+
 
 // remove previous fonts
 
 const prevFonts = glob.sync(formats.map(ext => path.join(srcDir, '*.' + ext)));
 prevFonts.forEach(font => fs.removeSync(font));
 
+
+const fontName = `${config.name}-${md5}`;
+const cssClassName = `${config.name}`;
 
 // generate font from svg && build index.less
 function font() {
@@ -51,8 +59,9 @@ function font() {
 }
 
 function upload(done) {
-    // generate encode.less
+    //generate encode.less
     encode(fontName, srcDir);
+
 
     // // upload font to cdn
     // formats.forEach(ext => {
@@ -61,5 +70,11 @@ function upload(done) {
 
     done();
 }
+
+function cleanSVG(){
+    fs.removeSync(svgDir);
+}
+
+
 
 exports.default = series(font, upload);

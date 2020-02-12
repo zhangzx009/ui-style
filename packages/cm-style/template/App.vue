@@ -1,54 +1,65 @@
 <template>
     <div id="app">
         <div class="scaffold">
-<!--        <div id="nav">-->
-<!--            <router-link to="/">Home</router-link> |-->
-<!--         </div>-->
-        <router-view/>
+            <router-view/>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "App"
+        name: "App",
+        beforeCreate() {
+            // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+            let vh = window.innerHeight * 0.01;
+            // Then we set the value in the --vh custom property to the root of the document
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
     }
 </script>
 
 <style lang="scss">
-    $top-safe-padding: 40px;
-    $left-safe-padding: 1px;
-    $right-safe-padding: 1px;
-    $bottom-safe-padding: 20px;
-    :root{
-        --top-safe-aera: #{$top-safe-padding};
-        --left-safe-aera: #{$left-safe-padding};
-        --right-safe-aera: #{$right-safe-padding};
-        --bottom-safe-aera: #{$bottom-safe-padding};
+    :root {
+        /* -------------------------------------------------------------------
+            Assign the default/constant/env values to CSS variables
+        */
+        --safe-area-inset-top: 0px;
+        --safe-area-inset-right: 0px;
+        --safe-area-inset-bottom: 0px;
+        --safe-area-inset-left: 0px;
     }
 
     #app {
-        width: 312px;
-        height: 698px;
+        /* if the screen size bigger then the 600px*/
+        @media only screen and (min-width: 600px) {
+            height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+            height: calc(var(--vh, 1vh) * 100);
+            margin: 0 auto;
+            max-width: 30%;
+        }
 
-
-        /*margin-top: 26px;*/
-        /*margin-left: 30px;*/
-        /*border-radius: 30px;*/
-        /*border: 1px dashed black;*/
-        /*box-shadow: 5px 5px 5px grey;*/
+        height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
+        margin: 0 auto;
+        max-width: 100%;
+        overflow: scroll;
+        scroll-snap-padding-top: 20px;
     }
-    .scaffold {
-        /*
-            scaffold provide page safe area for the layout
-            -- define appBar (sticky) to the top
-            -- define the bottomNavi
-            -- define the floatButton
-        */
 
-        padding-top: var(--top-safe-aera);
-        padding-bottom: var(--bottom-safe-aera);
-        padding-left: var(--left-safe-aera);
-        padding-right: var(--right-safe-aera);
+    @supports (padding: max(0px)) {
+        .scaffold {
+            /* -------------------------------------------------------------------
+               Use the CSS variables in the max function
+            */
+            padding-top: max(40px, var(--safe-area-inset-left));
+            padding-bottom: max(10px, var(--safe-area-inset-bottom));
+            padding-left: max(5px, var(--safe-area-inset-left));
+            padding-right: max(5px, var(--safe-area-inset-right));
+
+            cursor: url("../assets/touch-cursor.png") 8 8 ,auto;
+            background: #efeff4;
+            color: #000;
+        }
     }
+
 </style>
