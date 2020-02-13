@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div class="scaffold">
-            <router-view/>
+             <router-view/>
         </div>
     </div>
 </template>
@@ -33,7 +33,7 @@
         /* if the screen size bigger then the 600px*/
         @media only screen and (min-width: 600px) {
             height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
-            height: calc(var(--vh, 1vh) * 100);
+            height: calc(var(--vh, 1vh) * 110);
             margin: 0 auto;
             max-width: 30%;
         }
@@ -58,7 +58,8 @@
 
             cursor: url("../assets/touch-cursor.png") 8 8 ,auto;
             background: #efeff4;
-            color: #000;
+            color: #333333;
+
         }
     }
 

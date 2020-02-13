@@ -21,7 +21,7 @@
     }
 </script>
 <style lang="css">
-    @import "../../css/cm-style.css";
+    /*@import "../../css/cm-style.css";*/
 
     .bg-blue {
         background: #00c4a7;

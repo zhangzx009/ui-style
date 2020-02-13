@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        deviceNavigation: ['button', 'column', 'navigation', 'card','scroller'],
+        deviceNavigation: ['button', 'column', 'navigation', 'card', 'scroller', 'tab','playground', 'mobiplayground'],
         currentActive: 'button'
     },
     mutations: {
