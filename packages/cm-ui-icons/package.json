@@ -24,7 +24,7 @@
     "gulp-iconfont": "^10.0.3",
     "gulp-iconfont-css": "^3.0.0",
     "md5-file": "^4.0.0",
-    "shelljs": "^0.8.3",
+    "shelljs": "^0.8.5",
     "svgo": "^1.2.2",
     "webfonts-loader": "^5.0.0",
     "style-loader": "^0.23.1",
