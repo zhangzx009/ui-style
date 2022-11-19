@@ -24,7 +24,7 @@
     "@semantic-release/exec": "^5.0.0",
     "@storybook/addon-backgrounds": "^5.3.10",
     "@storybook/addon-knobs": "^5.3.10",
-    "@storybook/html": "^5.3.10",
+    "@storybook/html": "^6.5.13",
     "classnames": "^2.2.6"
   }
 }
